@@ -5,8 +5,6 @@
   "main": "dist/index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build:doc": "rimraf doc-site && docz build",
-    "preview:doc": "docz dev",
     "build:rollup": "rollup --config"
   },
   "keywords": [
@@ -22,7 +20,6 @@
     "autoprefixer": "9.8.0",
     "babel-preset-latest": "6.24.1",
     "cssnano": "4.1.10",
-    "docz": "2.3.1",
     "eslint": "6.1.0",
     "eslint-config-airbnb": "18.0.0",
     "eslint-import-resolver-webpack": "0.11.1",

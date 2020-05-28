@@ -1,3 +1,5 @@
+'use strict';
+
 function createCommonjsModule(fn, module) {
 	return module = { exports: {} }, fn(module, module.exports), module.exports;
 }
@@ -2224,7 +2226,7 @@ var Bulletin = function Bulletin(_ref) {
   var dataSource = _ref.dataSource;
   return react_5("div", {
     className: "bulletin-container"
-  }, dataSource);
+  }, dataSource.join(','));
 };
 
-export default Bulletin;
+module.exports = Bulletin;
