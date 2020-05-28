@@ -1,0 +1,61 @@
+{
+  "name": "bulletin",
+  "version": "0.0.1",
+  "description": "bulletin component",
+  "main": "dist/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build:doc": "rimraf doc-site && docz build",
+    "preview:doc": "docz dev",
+    "build:rollup": "rollup --config"
+  },
+  "keywords": [
+    "bulletin"
+  ],
+  "author": "qqxu",
+  "license": "ISC",
+  "devDependencies": {
+    "@babel/core": "7.9.6",
+    "@babel/preset-env": "7.9.6",
+    "@babel/preset-react": "7.9.4",
+    "@babel/preset-typescript": "7.9.0",
+    "autoprefixer": "9.8.0",
+    "babel-preset-latest": "6.24.1",
+    "cssnano": "4.1.10",
+    "docz": "2.3.1",
+    "eslint": "6.1.0",
+    "eslint-config-airbnb": "18.0.0",
+    "eslint-import-resolver-webpack": "0.11.1",
+    "eslint-loader": "2.2.1",
+    "eslint-plugin-import": "2.18.2",
+    "eslint-plugin-jsx-a11y": "6.2.3",
+    "eslint-plugin-react": "7.14.3",
+    "eslint-plugin-react-hooks": "1.7.0",
+    "postcss-calc": "7.0.2",
+    "postcss-cssnext": "3.1.0",
+    "postcss-nested": "4.2.1",
+    "postcss-px-to-viewport": "1.1.1",
+    "postcss-simple-vars": "5.0.2",
+    "rollup": "2.10.9",
+    "rollup-plugin-babel": "4.4.0",
+    "rollup-plugin-commonjs": "10.1.0",
+    "rollup-plugin-eslint": "7.0.0",
+    "rollup-plugin-node-resolve": "5.2.0",
+    "rollup-plugin-postcss": "3.1.1",
+    "rollup-plugin-typescript2": "0.27.1",
+    "style-loader": "1.2.1",
+    "stylelint": "10.1.0",
+    "stylelint-config-standard": "18.3.0",
+    "typescript": "3.9.3"
+  },
+  "peerDependencies": {
+    "react": "^16.2.0",
+    "react-dom": "^16.2.0"
+  },
+  "browserslist": [
+    "> 1%",
+    "last 2 versions",
+    "Android >= 3.2",
+    "iOS >= 7"
+  ]
+}

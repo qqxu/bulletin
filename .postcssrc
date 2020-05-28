@@ -1,0 +1,17 @@
+{
+  "plugins": {
+    "postcss-simple-vars": null,
+    "postcss-calc": null,
+    "postcss-nested": null,
+    "postcss-px-to-viewport": {
+      viewportWidth: 750,
+      viewportHeight: 1334,
+      unitPrecision: 7,
+      viewportUnit: 'vw',
+      selectorBlackList: [],
+      minPixelValue: 1,
+      mediaQuery: false
+    },
+    "autoprefixer": null,
+  }
+}
