@@ -1,6 +1,5 @@
 {
   "extends": "stylelint-config-standard",
-
   "rules": {
     "declaration-block-no-redundant-longhand-properties": null,
     "font-family-no-missing-generic-family-keyword": null,
