@@ -1,4 +1,4 @@
-### 脚手架模板生成内容
+### 脚手架模板生成
 自定义react型组件，搭建脚手架（eslint、stylelint、.editorconfig、postcssrc、babelrc、rollup）
 
 

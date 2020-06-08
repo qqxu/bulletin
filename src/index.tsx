@@ -4,17 +4,18 @@
  * @description: 用于公告，支持左右、上下
  *
  */
-import * as React from 'react';
+// eslint-disable-next-line no-unused-vars
+import React from 'react';
 import './style.css';
 
 export interface Props {
-    dataSource: any,
+  dataSource: number,
 }
 
 const Bulletin = ({ dataSource }: Props) => {
   return (
     <div className="bulletin-container">
-      {dataSource.join(',')}
+      {dataSource}
     </div>
   );
 };

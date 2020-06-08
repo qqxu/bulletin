@@ -1,57 +1,20 @@
 {
-  "parser": "babel-eslint",
-  "extends": "airbnb",
+  "root": true,
+  "parser": "@typescript-eslint/parser",
+  "parserOptions": {
+    "ecmaVersion": 6,
+    "sourceType": "module",
+    "ecmaFeatures": {
+      "modules": true
+    }
+  },
   "env": {
     "browser": true,
     "node": true,
     "commonjs": true,
     "es6": true
   },
-  "globals": {
-    "ENV": true
-  },
-  "parserOptions": {
-    "ecmaFeatures": {
-      "arrowFunctions": true,
-      "classes": true,
-      "defaultParams": true,
-      "experimentalObjectRestSpread": true,
-      "jsx": true,
-      "legacyDecorators": true,
-      "modules": true
-    }
-  },
-  "rules": {
-    "accessor-pairs": 2,
-    "array-bracket-spacing": 0,
-    "array-callback-return": 2,
-    "array-element-newline": 0,
-    "arrow-body-style": 0,
-    "arrow-parens": 0,
-    "consistent-this": [ 2, "self", "that" ],
-    "curly": [ 2, "multi-line", "consistent" ],
-    "func-names": 0,
-    "generator-star-spacing": [ 2, { "before": true } ],
-    "handle-callback-err": [2, "^(err|error)$"],
-    "import/prefer-default-export": 0,
-    "jsx-a11y/click-events-have-key-events": 0,
-    "max-len": [1, 200],
-    "max-nested-callbacks": [ 2, 5 ],
-    "max-params": [ 1, 7 ],
-    "new-cap": [2, { "capIsNewExceptions": ["Immutable", "List", "Map", "Set"] }],
-    "no-console": 1,
-    "no-constant-condition": [ 2, { "checkLoops": false } ],
-    "no-debugger": 1,
-    "no-else-return": 0,
-    "no-empty": [ 2, { "allowEmptyCatch": true } ],
-    "no-unused-expressions": [ 2, { "allowShortCircuit": true } ],
-    "no-underscore-dangle": 0,
-    "object-curly-newline": 0,
-    "one-var": [ 2, { "initialized": "never" } ],
-    "operator-linebreak": [2, "after", { "overrides": { "?": "before", ":": "before" } }],
-    "prefer-arrow-callback": 0,
-    "radix": 2,
-    "react/jsx-filename-extension": [2, { "extensions": [".js", ".jsx", ".ts", ".tsx"] }],
-    "no-plusplus": 0
-  }
+  "extends": [
+    "eslint:recommended"
+  ]
 }

@@ -1,22 +1,16 @@
-import path from 'path'
-
-import resolve from 'rollup-plugin-node-resolve';
+import path from 'path';
+import resolve from '@rollup/plugin-node-resolve';
 import babel from 'rollup-plugin-babel';
-import { eslint } from 'rollup-plugin-eslint'
-import rollupTypescript from 'rollup-plugin-typescript2'
-import commonjs from 'rollup-plugin-commonjs'
-import { DEFAULT_EXTENSIONS } from '@babel/core'
 
+import typescript from 'rollup-plugin-typescript2';
+import commonjs from 'rollup-plugin-commonjs';
+
+
+import tslint from "rollup-plugin-tslint";
+import stylelint from 'rollup-plugin-stylelint';
 import postcss from 'rollup-plugin-postcss';
 
-import simpleVars from 'postcss-simple-vars';
-
-import nested from 'postcss-nested';
-import cssnext from 'postcss-cssnext';
-import cssnano from 'cssnano';
-
-
-import pkg from './package.json'
+import pkg from './package.json';
 
 const paths = {
   input: path.join(__dirname, '/src/index.tsx'),
@@ -40,42 +34,18 @@ export default {
     },
   ],
   plugins: [
-    postcss({
-      plugins: [
-        simpleVars(),
-        nested(),
-        cssnext({ warnForDuplicates: false, }),
-        cssnano(),
-      ],
-      extensions: ['.scss', '.css']
-    }),
-
-    eslint({
+    stylelint(),
+    postcss(),
+    tslint({
       throwOnError: true,
       throwOnWarning: true,
       include: ['src/**/*.ts', 'src/**/*.tsx'],
       exclude: ['node_modules/**', '*.js', '*.scss', '*.css'],
     }),
-    commonjs({
-      include: [
-        'node_modules/**'
-      ],
-      namedExports: {
-        'node_modules/react/index.js': ['Component', 'PureComponent', 'Fragment', 'Children', 'createElement'],
-        'node_modules/react-dom/index.js': ['render']
-      }
-    }),
-    rollupTypescript(),
-    resolve({
-      mainFields: ["jsnext", "preferBuiltins", "browser"],
-    }),
-    babel({
-      exclude: 'node_modules/**',
-      extensions: [
-        ...DEFAULT_EXTENSIONS,
-        '.tsx',
-      ],
-    })
-  ]
+    typescript(),
+    babel(),
+    commonjs({ include: /node_modules/ }),
+    resolve(),
+  ],
+  external: ['react', 'react-dom'],
 };
-
